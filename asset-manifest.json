@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tom-Garrett-FSD/static/css/main.71b093b4.css",
+    "main.js": "/Tom-Garrett-FSD/static/js/main.817bbb53.js",
+    "static/js/453.d73b0aaa.chunk.js": "/Tom-Garrett-FSD/static/js/453.d73b0aaa.chunk.js",
+    "index.html": "/Tom-Garrett-FSD/index.html",
+    "main.71b093b4.css.map": "/Tom-Garrett-FSD/static/css/main.71b093b4.css.map",
+    "main.817bbb53.js.map": "/Tom-Garrett-FSD/static/js/main.817bbb53.js.map",
+    "453.d73b0aaa.chunk.js.map": "/Tom-Garrett-FSD/static/js/453.d73b0aaa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71b093b4.css",
+    "static/js/main.817bbb53.js"
+  ]
+}
