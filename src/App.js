@@ -64,7 +64,7 @@ function App() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Summary</h2>
           <p className="text-lg leading-relaxed">
-            Senior Full Stack Developer with expertise in React Native and a strong background in Ruby on Rails.
+            Senior Full Stack Developer with expertise in React and a strong background in Ruby on Rails.
             Featured in Microsoft Starters Hub and Enterprise Ireland's New Frontiers Program. Proven track
             record in innovative web and mobile application development.
           </p>
@@ -469,48 +469,15 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 bg-gray-800">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Contact</h2>
-          <a
-            href="https://www.linkedin.com/in/thomasgarrett-digital"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 text-lg hover:underline"
-          >
-            www.linkedin.com/in/thomasgarrett-digital
-          </a>
-          <form className="mt-12 max-w-md mx-auto bg-gradient-to-r from-indigo-600 to-purple-600 p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-4">Send a Message</h3>
-            <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-3 border border-indigo-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 text-gray-800"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-3 border border-indigo-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 text-gray-800"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <textarea
-                placeholder="Your Message"
-                className="w-full p-3 border border-indigo-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 text-gray-800"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-gray-900 py-3 rounded hover:from-pink-600 hover:via-red-600 hover:to-yellow-600 transition transform hover:scale-105"
-            >
-              Send Message
-            </button>
-          </form>
+        <h2 className="text-5xl font-extrabold drop-shadow-lg">Have a project in mind?</h2>
+        <a
+          href="https://www.linkedin.com/in/thomasgarrett-digital"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-200 transition transform hover:scale-105"
+        >
+          Connect on LinkedIn
+        </a>
         </div>
       </section>
 
