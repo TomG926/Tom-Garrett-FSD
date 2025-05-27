@@ -1,10 +1,20 @@
 // src/Navbar.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -17,42 +27,54 @@ function Navbar() {
     { name: 'Certifications', href: 'certifications' },
     { name: 'Publications', href: 'publications' },
     { name: 'Education', href: 'education' },
-    { name: 'Portfolio', href: 'portfolio' }, // New Portfolio Link
+    { name: 'Projects', href: 'projects' },
     { name: 'Contact', href: 'contact' },
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 fixed top-0 w-full z-20 shadow-md">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 animate-slide-down ${
+      isScrolled 
+        ? 'bg-neutral-900/90 backdrop-blur-md shadow-material' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#hero" className="text-2xl font-bold text-indigo-400">
+            <Link
+              to="hero"
+              smooth={true}
+              duration={500}
+              className="text-2xl font-bold text-primary-400 hover:text-primary-300 transition-colors"
+            >
               Tom Garrett
-            </a>
+            </Link>
           </div>
+
           {/* Desktop Menu */}
-          <div className="hidden md:flex md:items-center">
-            {navLinks.map((link) => (
+          <div className="hidden md:flex md:items-center space-x-1">
+            {navLinks.map((link, index) => (
               <Link
                 key={link.name}
                 to={link.href}
                 smooth={true}
                 duration={500}
-                offset={-64} // Adjust based on navbar height
-                activeClass="text-indigo-400 border-b-2 border-indigo-400"
+                offset={-64}
+                activeClass="text-primary-400 bg-neutral-800/50"
                 spy={true}
-                className="ml-6 cursor-pointer text-gray-300 hover:text-indigo-400 transition"
+                className="px-4 py-2 rounded-lg text-neutral-200 hover:text-primary-300 hover:bg-neutral-800/50 transition-all duration-300 cursor-pointer animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {link.name}
               </Link>
             ))}
           </div>
+
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-indigo-400 focus:outline-none focus:text-indigo-400"
+              className="text-neutral-200 hover:text-primary-400 focus:outline-none focus:text-primary-400 transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -64,11 +86,12 @@ function Navbar() {
           </div>
         </div>
       </div>
+
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+        <div className="md:hidden bg-neutral-900/95 backdrop-blur-md shadow-material animate-slide-down">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <Link
                 key={link.name}
                 to={link.href}
@@ -76,9 +99,10 @@ function Navbar() {
                 duration={500}
                 offset={-64}
                 onClick={() => setIsOpen(false)}
-                activeClass="text-indigo-400"
+                activeClass="text-primary-400 bg-neutral-800/50"
                 spy={true}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-indigo-400 hover:bg-gray-700 transition cursor-pointer"
+                className="block px-4 py-3 rounded-lg text-base font-medium text-neutral-200 hover:text-primary-300 hover:bg-neutral-800/50 transition-all duration-300 cursor-pointer animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {link.name}
               </Link>
