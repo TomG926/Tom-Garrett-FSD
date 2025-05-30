@@ -27,8 +27,7 @@ function Navbar() {
     { name: 'Certifications', href: 'certifications' },
     { name: 'Publications', href: 'publications' },
     { name: 'Education', href: 'education' },
-    { name: 'Projects', href: 'projects' },
-    { name: 'Contact', href: 'contact' },
+    { name: 'Contact', href: 'contact' }
   ];
 
   return (
@@ -45,7 +44,11 @@ function Navbar() {
               to="hero"
               smooth={true}
               duration={500}
-              className="text-2xl font-bold text-primary-400 hover:text-primary-300 transition-colors"
+              className={`text-2xl font-bold transition-colors ${
+                isScrolled 
+                  ? 'text-primary-400 hover:text-primary-300' 
+                  : 'text-transparent hover:text-white/50'
+              }`}
             >
               Tom Garrett
             </Link>
@@ -62,7 +65,11 @@ function Navbar() {
                 offset={-64}
                 activeClass="text-primary-400 bg-neutral-800/50"
                 spy={true}
-                className="px-4 py-2 rounded-lg text-neutral-200 hover:text-primary-300 hover:bg-neutral-800/50 transition-all duration-300 cursor-pointer animate-fade-in"
+                className={`px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer animate-fade-in ${
+                  isScrolled 
+                    ? 'text-neutral-200 hover:text-primary-300 hover:bg-neutral-800/50' 
+                    : 'text-transparent hover:text-white/50'
+                }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {link.name}
@@ -74,7 +81,9 @@ function Navbar() {
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-neutral-200 hover:text-primary-400 focus:outline-none focus:text-primary-400 transition-colors"
+              className={`hover:text-primary-400 focus:outline-none focus:text-primary-400 transition-colors ${
+                isScrolled ? 'text-neutral-200' : 'text-transparent'
+              }`}
               aria-label="Toggle menu"
             >
               {isOpen ? (

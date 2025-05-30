@@ -41,7 +41,7 @@ function App() {
       <Navbar />
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <section className="relative overflow-hidden rounded-4xl bg-gradient-to-r from-primary-600 to-secondary-600 p-8 md:p-12 animate-slide-up">
+        <section id="hero" className="relative overflow-hidden rounded-4xl bg-gradient-to-r from-primary-600 to-secondary-600 p-8 md:p-12 animate-slide-up">
           <div className="relative z-10">
             <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">
               Tom Garrett
@@ -68,7 +68,7 @@ function App() {
         </section>
 
         {/* Summary Section */}
-        <section className="mt-12 animate-fade-in">
+        <section id="summary" className="mt-12 animate-fade-in">
           <div className="rounded-2xl bg-white/90 p-8 backdrop-blur-sm shadow-material dark:bg-neutral-800/90">
             <h2 className="mb-6 text-3xl font-bold text-neutral-900 dark:text-white">
               Summary
@@ -82,7 +82,7 @@ function App() {
         </section>
 
         {/* Experience Section */}
-        <section className="mt-12">
+        <section id="experience" className="mt-12">
           <h2 className="mb-8 text-3xl font-bold text-neutral-900 dark:text-white animate-slide-up">
             Experience
           </h2>
@@ -290,7 +290,7 @@ function App() {
         </section>
 
         {/* Skills Section */}
-        <section className="mt-12">
+        <section id="skills" className="mt-12">
           <h2 className="mb-8 text-3xl font-bold text-neutral-900 dark:text-white animate-slide-up">
             Top Skills
           </h2>
@@ -353,7 +353,7 @@ function App() {
         </section>
 
         {/* Certifications Section */}
-        <section className="mt-12">
+        <section id="certifications" className="mt-12">
           <h2 className="mb-8 text-3xl font-bold text-neutral-900 dark:text-white animate-slide-up">
             Certifications
           </h2>
@@ -374,7 +374,7 @@ function App() {
         </section>
 
         {/* Publications Section */}
-        <section className="mt-12">
+        <section id="publications" className="mt-12">
           <h2 className="mb-8 text-3xl font-bold text-neutral-900 dark:text-white animate-slide-up">
             Publications
           </h2>
@@ -395,7 +395,7 @@ function App() {
         </section>
 
         {/* Education Section */}
-        <section className="mt-12">
+        <section id="education" className="mt-12">
           <h2 className="mb-8 text-3xl font-bold text-neutral-900 dark:text-white animate-slide-up">
             Education
           </h2>
@@ -424,7 +424,7 @@ function App() {
         </section>
 
         {/* Contact Section */}
-        <section className="mt-12">
+        <section id="contact" className="mt-12">
           <div className="rounded-2xl bg-gradient-to-r from-primary-600 to-secondary-600 p-8 text-center animate-float">
             <h2 className="mb-4 text-3xl font-bold text-white">
               Contact
