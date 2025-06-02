@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Tom-Garrett-FSD/static/css/main.499b9e3a.css",
-    "main.js": "/Tom-Garrett-FSD/static/js/main.c58c2756.js",
-    "static/js/453.40fede6d.chunk.js": "/Tom-Garrett-FSD/static/js/453.40fede6d.chunk.js",
-    "index.html": "/Tom-Garrett-FSD/index.html",
-    "main.499b9e3a.css.map": "/Tom-Garrett-FSD/static/css/main.499b9e3a.css.map",
-    "main.c58c2756.js.map": "/Tom-Garrett-FSD/static/js/main.c58c2756.js.map",
-    "453.40fede6d.chunk.js.map": "/Tom-Garrett-FSD/static/js/453.40fede6d.chunk.js.map"
+    "main.css": "./static/css/main.499b9e3a.css",
+    "main.js": "./static/js/main.d6591dfe.js",
+    "static/js/453.40fede6d.chunk.js": "./static/js/453.40fede6d.chunk.js",
+    "index.html": "./index.html",
+    "main.499b9e3a.css.map": "./static/css/main.499b9e3a.css.map",
+    "main.d6591dfe.js.map": "./static/js/main.d6591dfe.js.map",
+    "453.40fede6d.chunk.js.map": "./static/js/453.40fede6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.499b9e3a.css",
-    "static/js/main.c58c2756.js"
+    "static/js/main.d6591dfe.js"
   ]
 }
