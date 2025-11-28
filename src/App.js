@@ -2,40 +2,9 @@
 
 import React from 'react';
 import Navbar from './Navbar';
-import { FaGithub, FaExternalLinkAlt, FaNewspaper, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 function App() {
-  const portfolioProjects = [
-    {
-      title: 'Guest Nutrition',
-      description: 'An AI-powered recipe generator that helps users create healthy meals based on dietary preferences and available ingredients. Features personalized nutrition analysis and meal planning.',
-      technologies: ['Python', 'React', 'OpenAI API', 'PostgreSQL'],
-      githubLink: 'https://github.com/yourusername/guest-nutrition',
-      liveLink: 'https://guest-nutrition-demo.com',
-    },
-    {
-      title: 'Paw Tribe',
-      description: 'A platform dedicated to reuniting lost pets with their owners. Features advanced filtering for lost pet posts and Facebook Ads integration for increased visibility.',
-      technologies: ['Ruby on Rails', 'React', 'Facebook API', 'PostgreSQL'],
-      githubLink: 'https://github.com/yourusername/paw-tribe',
-      liveLink: 'https://paw-tribe-demo.com',
-    },
-    {
-      title: 'Fake News Checker',
-      description: 'A Google Chrome plugin that verifies the credibility of news articles by cross-referencing trusted sources and providing reliability scores. Includes a sleek, user-friendly interface.',
-      technologies: ['JavaScript', 'Node.js', 'Chrome Extension APIs', 'MongoDB'],
-      githubLink: 'https://github.com/yourusername/fake-news-checker',
-      liveLink: 'https://fake-news-checker-demo.com',
-    },
-    {
-      title: 'DocuDynamics',
-      description: 'An automated document scanning and processing application that extracts key data from documents and integrates with cloud storage solutions.',
-      technologies: ['Python', 'Django', 'React', 'AWS S3'],
-      githubLink: 'https://github.com/yourusername/docu-dynamics',
-      liveLink: 'https://docu-dynamics-demo.com',
-    },
-  ];  
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800 animate-fade-in">
       <Navbar />
@@ -432,4 +401,5 @@ function App() {
 }
 
 export default App;
+
 
